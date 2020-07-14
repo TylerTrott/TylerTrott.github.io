@@ -16,6 +16,10 @@ a {
 a:hover {
     text-decoration: underline; }
 
+nav {
+  display: inline;
+}
+
 li a {
   color: #000000;
   display: inline;
