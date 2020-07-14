@@ -12,12 +12,12 @@ body {
 a {
   color: #1e6bb8;
   text-decoration: none; }
-  a:hover {
+
+a:hover {
     text-decoration: underline; }
 
 li {
   display: inline;
-   background-color: #f1f1f1;
 }
 
 ul {
