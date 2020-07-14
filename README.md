@@ -1,2 +1,2 @@
 # TylerTrott.github.io
-This is to test the Github Pages
+This webpage is being utilized to experiment the fluidity of Github Pages and the resourcefulness of creating and designing a webpage hosted by Github Pages
