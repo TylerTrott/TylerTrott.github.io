@@ -20,10 +20,14 @@ li a {
   color: #000000;
 }
 
+li {
+   display: inline;
+}
+
 ul {
   list-style-type: none;
   width: 60px;
-  display: inline;
+  color: #000000;
  }
 
 .btn {
