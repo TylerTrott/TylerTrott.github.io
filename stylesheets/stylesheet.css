@@ -19,6 +19,13 @@ li {
   display: inline;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+}
+
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
