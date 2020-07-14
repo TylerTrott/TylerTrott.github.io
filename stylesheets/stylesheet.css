@@ -12,9 +12,12 @@ body {
 
 li {
   display: inline-block;
-   border-style: solid;
+}
+
+ul {
+  border-style: solid;
   border-width: 1px;
-  border-radius: 0.3rem;
+  border-radius: 0.3rem; 
 }
 
 .btn {
