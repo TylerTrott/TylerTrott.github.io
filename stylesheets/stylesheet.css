@@ -16,7 +16,7 @@ li a {
   border-width: 1px;
   border-radius: 0.3rem; 
   color: #000000; 
-  display: inline-block;
+  display: inline;
   }
 
 .btn {
