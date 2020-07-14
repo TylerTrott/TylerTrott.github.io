@@ -18,7 +18,6 @@ a:hover {
 
 li a {
   color: #000000;
-  float: left;
 }
 
 ul {
@@ -26,6 +25,7 @@ ul {
   margin: 0;
   padding: 0;
   width: 60px;
+  float: left;
  }
 
 .btn {
