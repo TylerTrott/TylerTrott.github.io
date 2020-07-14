@@ -15,6 +15,10 @@ a {
   a:hover {
     text-decoration: underline; }
 
+li {
+  display: inline;
+}
+
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
