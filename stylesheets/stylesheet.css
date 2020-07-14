@@ -16,12 +16,8 @@ a {
 a:hover {
     text-decoration: underline; }
 
-li a {
-  color: #000000;
-}
-
 li {
-   float: left;
+   display: inline;
 }
 
 ul {
