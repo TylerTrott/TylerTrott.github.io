@@ -16,7 +16,7 @@ a {
 a:hover {
     text-decoration: underline; }
 
-li {
+li a {
   display: inline;
 }
 
