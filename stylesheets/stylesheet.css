@@ -21,7 +21,7 @@ li a {
 }
 
 li {
-   display: inline;
+   float: left;
 }
 
 ul {
