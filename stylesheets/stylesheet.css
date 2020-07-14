@@ -9,29 +9,10 @@ body {
   line-height: 1.5;
   color: #606c71; }
 
-a {
-  color: #000000;
-  text-decoration: none; }
-
-a:hover {
-    text-decoration: underline; }
 
 li {
-  float: left;
+  display: inline-block;
 }
-
-li a {
-  display: block;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0.3rem;
-}
-
-ul {
-  list-style-type: none;
-  width: 60px;
-  color: #000000;
- }
 
 .btn {
   display: inline-block;
