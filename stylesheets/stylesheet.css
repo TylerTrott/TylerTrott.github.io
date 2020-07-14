@@ -9,6 +9,11 @@ body {
   line-height: 1.5;
   color: #606c71; }
 
+li a {
+  color: #000000;
+  display: inline;
+  }
+
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
