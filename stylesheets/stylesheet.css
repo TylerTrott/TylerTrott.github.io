@@ -1,6 +1,6 @@
 body { 
 background-size: cover;
- background-image: "../Github_Pics/landpagebkgrnd.jpg";
+ background-image: url("https://cdn.pixabay.com/photo/2020/06/03/15/20/landscape-5255326_1280.jpg");
  background-color: #FF8F00;
 }
 
