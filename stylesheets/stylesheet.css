@@ -9,7 +9,7 @@ body {
   line-height: 1.5;
   color: #606c71;
 background-size: cover;
- background-image: ("../Github_Pics/landpagebkgrnd.jpg");
+ background-image: url("https://github.com/TylerTrott/TylerTrott.github.io/tree/master/Github_Pics/landpagebkgrnd.jpg");
 }
 
 li a {
