@@ -1,204 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tyler Trott</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tyler Trott | Portfolio</title>
+  <!-- Font Awesome for social icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <style>
+    /* Global reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    a {
+      color: #00d4ff;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #007bff;
+    }
+    header {
+      background: linear-gradient(135deg, #007bff, #00d4ff);
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+      border: 4px solid #fff;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    header h3 {
+      font-size: 1.2em;
+      font-weight: normal;
+      color: #f0f0f0;
+      margin-bottom: 10px;
+    }
+    .contact-links {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #007bff;
+      color: #ffffff;
+      padding: 8px 16px;
+      margin: 10px 0;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #00d4ff;
+    }
+    .section {
+      margin: 40px 0;
+      padding: 20px;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 212, 255, 0.2);
+    }
+    .section h2 {
+      margin-bottom: 20px;
+      color: #00d4ff;
+      border-bottom: 2px solid #00d4ff;
+      padding-bottom: 5px;
+    }
+    .section h3 {
+      color: #00d4ff;
+      margin-bottom: 10px;
+    }
+    .section ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+    .project,
+    .experience,
+    .education,
+    .tech-writing {
+      margin-bottom: 20px;
+    }
+    .project img.project-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid #333;
+      margin: 40px 0;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 1.5em;
+      color: #00d4ff;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #007bff;
+    }
+  </style>
 </head>
 <body>
-    <img src="headshot.png" alt="Profile Image" width="150" height="150">
+  <!-- Header Section -->
+  <header>
+    <img src="headshot.png" alt="Profile Image" />
     <h1>Tyler Trott</h1>
     <h3>Computer Scientist working towards a practising Solicitor Certification | Ex-Professional Tennis Player</h3>
-    <p><a href="mailto:tylertrott24@yahoo.com">tylertrott24@yahoo.com</a> | <a href="https://www.linkedin.com/in/tyler-t-b307b0107/">LinkedIn</a></p>
-    
-    <h3>CSC466 Project</h3>
-    <p><a href="CSC466project.html">View Project</a></p>
-    
-    <hr>
-
-
-    <h2>About Me</h2>
-    <p>
-        I was born and (mostly) raised in Bermuda. I 'went pro' in the tennis scene at age 16 officially. I coached and
-        played up until 2018 when I decided to pursue a career in Computer Science. I have always had a passion for it
-        and felt it was best to pursue it. I began my studies at Bermuda College and obtained an Associate of Science in
-        Computer Information Systems in 2020. I then enrolled at Ontario Tech University in the Bachelor of Computer Science
-        (Honours) program. I transferred to the University of Victoria in 2023 to complete my degree. With an expected
-        graduation date of June 2025, I hope to begin my Post Graduate Diploma of Law at the University of Law in London, UK.
+    <p class="contact-links">
+      <a href="mailto:tylertrott24@yahoo.com">tylertrott24@yahoo.com</a> |
+      <a href="https://www.linkedin.com/in/tyler-t-b307b0107/">LinkedIn</a>
     </p>
-    <p> During my time in Bermuda College, I began work at Atsign where I obtained expertise in designing secure systems,
+    <p>
+      <strong>CSC466 Project:</strong>
+      <a class="btn" href="CSC466project.html">View Project</a>
+    </p>
+  </header>
+
+  <!-- Main Content Container -->
+  <div class="container">
+    <!-- About Me -->
+    <section class="section" id="about-me">
+      <h2>About Me</h2>
+      <p>
+        I was born and (mostly) raised in Bermuda. I 'went pro' in the tennis scene at age 16 officially.
+        I coached and played up until 2018 when I decided to pursue a career in Computer Science. I have always had a passion for it and felt it was best to pursue it.
+        I began my studies at Bermuda College and obtained an Associate of Science in Computer Information Systems in 2020.
+        I then enrolled at Ontario Tech University in the Bachelor of Computer Science (Honours) program.
+        I transferred to the University of Victoria in 2023 to complete my degree.
+        With an expected graduation date of June 2025, I hope to begin my Post Graduate Diploma of Law at the University of Law in London, UK.
+      </p>
+      <p>
+        During my time in Bermuda College, I began work at Atsign where I obtained expertise in designing secure systems,
         developing advanced cryptographic technology and innovating security solutions for the IoT and insurance sectors.
         I became adept at forging partnerships to address emerging cybersecurity challenges, crafting strategies
-        that integrate advanced security technologies developed by a startup company, and leading critical, high-impact projects.</p>
-    <p> During my schooling I have become proficient in threat detection, vulnerability assessment, and secure database management, with a
-        strong focus on implementing effective countermeasures and enhancing system resilience.
-        Experienced in agile environments, startup ecosystems, and developing secure software solutions using
-        C, Python, Java, and SQL. Skilled in leveraging data visualization tools to analyze threats and inform security decisions.</p>
-    <p> I have also worked extensively with machine learning theory and artificial intelligence, completing various projects that involve
-        PAC learning, support vector machines, boosting, and more. My experience includes developing algorithms for
-        linear separators, understanding uniform convergence, and applying information theory concepts like Shannon entropy
-        and KL-divergence.</p>
-    <p> In addition to my work in AI (mostly projects involving big data analytics), I have been involved in networking projects, setting up and configuring web servers,
-        and working with tools like Mininet, Hypervisor, and ESXi. My projects often involve integrating various technologies
-        to create robust and secure systems, and I have a strong background in both theoretical and practical aspects of
-        computer science.</p>
+        that integrate advanced security technologies developed by a startup company, and leading critical, high-impact projects.
+      </p>
+      <p>
+        During my schooling I have become proficient in threat detection, vulnerability assessment, and secure database management,
+        with a strong focus on implementing effective countermeasures and enhancing system resilience.
+        Experienced in agile environments, startup ecosystems, and developing secure software solutions using C, Python, Java, and SQL.
+        Skilled in leveraging data visualization tools to analyze threats and inform security decisions.
+      </p>
+      <p>
+        I have also worked extensively with machine learning theory and artificial intelligence, completing various projects that involve
+        PAC learning, support vector machines, boosting, and more.
+        My experience includes developing algorithms for linear separators, understanding uniform convergence, and applying
+        information theory concepts like Shannon entropy and KL-divergence.
+      </p>
+      <p>
+        In addition to my work in AI (mostly projects involving big data analytics), I have been involved in networking projects,
+        setting up and configuring web servers, and working with tools like Mininet, Hypervisor, and ESXi.
+        My projects often involve integrating various technologies to create robust and secure systems, and I have a strong background
+        in both theoretical and practical aspects of computer science.
+      </p>
+    </section>
 
-    <h2>Skills</h2>
-    <ul>
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <ul>
         <li>Software Development (C, Python, Java, SQL)</li>
         <li>Mobile Development (Dart, Flutter, Firebase)</li>
         <li>Machine Learning Theory and AI</li>
-        <li>Technical Writing & Documentation</li>
+        <li>Technical Writing &amp; Documentation</li>
         <li>Authentication methodologies (CRAM, APKAM)</li>
         <li>Mininet, Hypervisor, ESXi, Curl, OSINT, and other tools</li>
         <li>Web server setup and configuration</li>
-        <li>Open Source Projects & Contribution (GitHub)</li>
+        <li>Open Source Projects &amp; Contribution (GitHub)</li>
         <li>Agile Development (XP, Scrum, Kanban)</li>
         <li>GCP, AWS, Azure proficiency</li>
-        <li>Project & Database Management</li>
+        <li>Project &amp; Database Management</li>
         <li>Startup Environment Experience</li>
-        <li>Developer Acquisition & Intern Program Design</li>
-        <li>Code & Performance Management</li>
-        <li>Business Strategy & Project Leadership</li>
-    </ul>
+        <li>Developer Acquisition &amp; Intern Program Design</li>
+        <li>Code &amp; Performance Management</li>
+        <li>Business Strategy &amp; Project Leadership</li>
+      </ul>
+    </section>
 
-    <h2>Education</h2>
-    <h3>Upcoming: Post Graduate Diploma of Law, University of Law</h3>
-    <ul>
-        <li>Start Date: September 2025</li>
-        <li>Expected Grad: June 2026</li>
-        <li>London, UK</li>
-    </ul>
+    <!-- Education -->
+    <section class="section" id="education">
+      <h2>Education</h2>
+      <div class="education">
+        <h3>Upcoming: Post Graduate Diploma of Law, University of Law</h3>
+        <ul>
+          <li>Start Date: September 2025</li>
+          <li>Expected Grad: June 2026</li>
+          <li>London, UK</li>
+        </ul>
+      </div>
+      <div class="education">
+        <h3>Bachelor of Science, Computer Science, University of Victoria (Expected Grad: June 2025)</h3>
+        <ul>
+          <li>
+            <a href="https://onlineacademiccommunity.uvic.ca/uvfr/"
+              >UVic Formula Racing (UVFR) Combustion (IC) Electronic and Sensor Integration</a
+            >
+          </li>
+          <li>
+            <a href="https://vikesrec.ca/clubs/tennis">UVic Competitive Tennis Team</a>
+          </li>
+        </ul>
+      </div>
+      <div class="education">
+        <h3>Bachelor of Science (Honours), Data Science, Ontario Tech University (Sep 2020 - Apr 2023)</h3>
+        <ul>
+          <li>Computer Science Club Executive</li>
+        </ul>
+      </div>
+      <div class="education">
+        <h3>Associate of Science, Computer Information Systems (Sep 2018 - May 2020)</h3>
+        <ul>
+          <li>Graduation with Merit</li>
+          <li>Most Outstanding Information Technology Graduate, Class of 2020</li>
+        </ul>
+      </div>
+    </section>
 
-    <h3>Bachelor of Science, Computer Science, University of Victoria (Expected Grad: June 2025)</h3>
-    <ul>
-        <li><a href="https://onlineacademiccommunity.uvic.ca/uvfr/">UVic Formula Racing (UVFR) Combustion (IC) Electronic and Sensor Integration</a></li>
-        <li><a href="https://vikesrec.ca/clubs/tennis">UVic Competitive Tennis Team</a></li>
-    </ul>
+    <!-- Software Engineering Projects -->
+    <section class="section" id="projects">
+      <h2>Software Engineering Projects</h2>
+      <div class="project">
+        <h3>at_c</h3>
+        <p>
+          <strong>Description:</strong> The alpha C implementation of the atSDK for the at_platform.
+          This project is a work in progress and is not yet ready for production use.
+          The atSDK is a set of libraries that allow developers to build applications that use the at_platform.
+          It is designed to be easy to use and to provide a high level of security and privacy for users.
+        </p>
+        <p>
+          <strong>What I did:</strong> I contributed the beginning of the ed25519 implementation in addition to adding test cases for RSA 4096 operability.
+        </p>
+        <p>
+          <a class="btn" href="https://github.com/atsign-foundation/at_c" target="_blank">GitHub Repo</a>
+        </p>
+      </div>
+      <hr />
+      <div class="project">
+        <h3>EcoCheck (Clean Choice)</h3>
+        <h4>Schulich School of Engineering - Schulich Hacks 2023</h4>
+        <img src="presentation.png" alt="Presentation" class="project-img" />
+        <p>
+          <strong>Description:</strong> Clean Choice is a web app that informs you on environmentally friendly alternatives to products you purchased.
+          Upon generating a receipt, a QR code is created that uses your receipt details to inform you of the carbon footprint of your purchase
+          and recommend greener product alternatives.
+        </p>
+        <p><strong>Technologies Used:</strong></p>
+        <ul>
+          <li>Web App (React, Tailwind)</li>
+          <li>Database (Google Cloud, MySQL)</li>
+          <li>API Scripts &amp; Functions (Node.js, SerpAPI, Ditch Carbon)</li>
+          <li>Receipt generation (Node.js)</li>
+        </ul>
+        <p>
+          <a class="btn" href="https://github.com/Re-Four/EcoCheck" target="_blank">GitHub Repo</a> |
+          <a class="btn" href="https://eco-check.vercel.app/dashboard/app" target="_blank">Live Demo</a>
+        </p>
+      </div>
+      <hr />
+      <div class="project">
+        <h3>Machine Learning Theory</h3>
+        <p>
+          <strong>Description:</strong> Completed problem sheets related to various topics to reinforce understanding and application of machine learning theory.
+        </p>
+        <ul>
+          <li>PAC learning</li>
+          <li>Consistency model, perceptron, mistake bound, and a PAC learning algorithm for linear separators</li>
+          <li>Agnostic learning</li>
+          <li>Uniform convergence (finite classes), including: Markov's inequality, Hoeffding's inequality</li>
+          <li>Uniform convergence (infinite classes): VC dimension</li>
+          <li>Rademacher complexity</li>
+          <li>Support vector machines, margin bounds, and kernels</li>
+          <li>Boosting</li>
+          <li>Information theory: Shannon entropy and KL-divergence</li>
+          <li>Occam bounds and PAC-Bayes</li>
+          <li>Compression bounds</li>
+          <li>Active learning</li>
+          <li>Decision-theoretic online learning</li>
+          <li>Prediction with expert advice</li>
+          <li>Bandits</li>
+          <li>Stochastic and online convex optimization</li>
+          <li>Online-to-batch conversion</li>
+        </ul>
+      </div>
+      <hr />
+      <div class="project">
+        <h3>ATP-Tour-Analytics-2022</h3>
+        <p>
+          <strong>Description:</strong> I am a big tennis fan and wanted to create a project that would allow me to analyze ATP Tour data.
+          This project was for a data science course at Ontario Tech University and involved analyzing 2022 ATP Tour data
+          and creating visualizations to show trends and patterns.
+        </p>
+        <p>
+          <strong>Technologies Used:</strong> R, API Scripts (Node.js)
+        </p>
+        <p>
+          <a class="btn" href="https://github.com/TylerTrott/ATP-Tour-Analytics-2022" target="_blank">GitHub Repo</a> |
+          <a class="btn" href="ATP2022Analysis.html" target="_blank">Live Demo</a>
+        </p>
+      </div>
+    </section>
 
-    <h3>Bachelor of Science (Honours), Data Science, Ontario Tech University (Sep 2020 - Apr 2023)</h3>
-    <ul>
-        <li>Computer Science Club Executive</li>
-    </ul>
+    <!-- Notable Technical Writing and Documentation -->
+    <section class="section" id="tech-writing">
+      <h2>Notable Technical Writing and Documentation Pieces</h2>
+      <div class="tech-writing">
+        <h3>docs.atsign.com Webpage</h3>
+        <p>
+          <strong>Description:</strong> The atSDK documentation webpage is a comprehensive guide to the atSDK libraries.
+          It covers installation, configuration, and usage, including code examples and tutorials to help developers get started.
+        </p>
+        <p>
+          <a class="btn" href="https://docs.atsign.com/" target="_blank">Live Site</a>
+        </p>
+      </div>
+      <hr />
+      <div class="tech-writing">
+        <h3>Medium</h3>
+        <p>
+          <strong>Description:</strong> I have written several articles on Medium about software engineering, cybersecurity, and other topics.
+          While my account (created with my Atsign email) no longer holds my personal blogs, the company page still exists where I contributed heavily.
+          I have also added my personal Medium page.
+        </p>
+        <p>
+          <a class="btn" href="https://medium.com/@atsigncompany" target="_blank">Medium Page</a> |
+          <a class="btn" href="https://medium.com/@tyler.trott" target="_blank">Personal Medium Page</a>
+        </p>
+      </div>
+      <hr />
+      <div class="tech-writing">
+        <h3>AtsignCo Youtube</h3>
+        <p>
+          <strong>Description:</strong> During my tenure at Atsign, I was in charge of the YouTube channel.
+          I created video tutorials for the atSDK libraries and atProtocol, hosted events for the developer community,
+          and led podcasts. The tutorials include installation, configuration, usage examples, and more.
+        </p>
+        <p>
+          <a class="btn" href="https://www.youtube.com/@AtsignCo" target="_blank">YouTube Channel</a>
+        </p>
+      </div>
+      <hr />
+      <div class="tech-writing">
+        <h3>Intro to BLoC</h3>
+        <p>
+          <strong>Description:</strong> In 2022, I was the main panel speaker for a Flutter Vancouver Meetup.
+          I presented on BLoC (Business Logic Component) and how it can manage state in Flutter applications,
+          including an overview and practical usage.
+        </p>
+        <p>
+          <a class="btn" href="https://www.youtube.com/watch?v=Q6wbH4bFQsw" target="_blank">YouTube Video</a>
+        </p>
+      </div>
+    </section>
 
-    <h3>Associate of Science, Computer Information Systems (Sep 2018 - May 2020)</h3>
-    <ul>
-        <li>Graduation with Merit</li>
-        <li>Most Outstanding Information Technology Graduate, Class of 2020</li>
-    </ul>
+    <!-- Work Experience -->
+    <section class="section" id="experience">
+      <h2>Work Experience</h2>
+      <div class="experience">
+        <h3>Technical Solutions Architect, Atsign (Aug 2020 - January 2025)</h3>
+        <ul>
+          <li>Software engineering company's protocol, including microprocessor development and application integration.</li>
+          <li>Assisted in project management, QA, and oversaw internship program development.</li>
+          <li>Forged partnerships with insurance carriers, brokers, and secured product endorsements.</li>
+          <li>Designed business strategies integrating cybersecurity tech into insurance policies.</li>
+          <li>Directed project management and content for developer engagement and collaboration.</li>
+        </ul>
+      </div>
+      <div class="experience">
+        <h3>Summer Intern, 'Intro-to-Insurance' Programme, BFIS — Chicago, IL (Summer 2024)</h3>
+        <ul>
+          <li>Completed a 2-week internship, gaining knowledge of insurance types, reinsurance, captive management, and syndicates.</li>
+          <li>Explored regulatory processes, legal principles, and the social/economic impact of insurance.</li>
+          <li>Engaged with top industry companies like Travelers, Lockton, and MunichRe amongst others.</li>
+        </ul>
+      </div>
+      <div class="experience">
+        <h3>Professor Assistant, University of Massachusetts - Boston (Sep 2022 - Sept 2023)</h3>
+        <ul>
+          <li>Served as an external lecturer of Software Engineering practices.</li>
+          <li>Created, implemented, and executed course outlines.</li>
+          <li>Instructed students on design and implementation of software on microcontrollers/processors.</li>
+        </ul>
+      </div>
+      <div class="experience">
+        <h3>Statistical Database Intern, Department of Statistics - Bermuda (Jan 2020 - Aug 2020)</h3>
+        <ul>
+          <li>Developed/maintained statistical databases using SQL for accurate data management/reporting.</li>
+          <li>Analyzed Household Income and Expenditure Survey data, applying statistical techniques to identify trends and insights.</li>
+          <li>Performed data querying, analysis, and visualization with tools like Python, R, and Tableau.</li>
+          <li>Assisted in census design and execution, including sampling, survey development, and data validation.</li>
+        </ul>
+      </div>
+    </section>
 
-    <h2>Software Engineering Projects</h2>
-    <h3>at_c</h3>
-    <p><strong>Description:</strong> The alpha C implementation of the atSDK for the at_platform. This project is a work in progress and is not yet ready for production use. The atSDK is a set of libraries that allow developers to build applications that use the at_platform. The atSDK is designed to be easy to use and to provide a high level of security and privacy for users.</p>
-    <p><strong>What I did:</strong> I contributed the beginning of the ed25519 implementation in addition to adding tests cases for RSA 4096 operability.</p>
-    <p><a href="https://github.com/atsign-foundation/at_c">GitHub Repo</a></p>
-
-    <hr>
-
-    <h3>EcoCheck (Clean Choice)</h3>
-    <h4>Schulich School of Engineering - Schulich Hacks 2023</h4>
-        <img src="presentation.png" alt="Presentations" width="600" height="400">
-    <p><strong>Description:</strong> Clean Choice is a web app that informs you on other environmentally friendly alternatives to products you purchased. Upon generating a receipt, a QR code is generated where your receipt details will inform you on the carbon footprint of your purchase and recommend other products that have a greener impact on the environment.</p>
-    <p><strong>Technologies Used:</strong></p>
-    <ul>
-        <li>Web App (React, Tailwind)</li>
-        <li>Database (Google Cloud, MySQL)</li>
-        <li>API Scripts & Functions (Node.js, SerpAPI, Ditch Carbon)</li>
-        <li>Receipt generation (Node.js)</li>
-    </ul>
-    <p><a href="https://github.com/Re-Four/EcoCheck">GitHub Repo</a> | <a href="https://eco-check.vercel.app/dashboard/app">Live Demo</a></p>
-
-    <hr>
-
-    <h3>Machine Learning Theory</h3>
-    <p><strong>Description:</strong> Completed problem sheets related to these topics to reinforce understanding and application of machine learning theory.</p>
-    <ul>
-        <li>PAC learning</li>
-        <li>Consistency model, perceptron, mistake bound, and a PAC learning algorithm for linear separators</li>
-        <li>Agnostic learning</li>
-        <li>Uniform convergence (finite classes), including: Markov's inequality, Hoeffding's inequality</li>
-        <li>Uniform convergence (infinite classes): VC dimension</li>
-        <li>Rademacher complexity</li>
-        <li>Support vector machines, margin bounds, and kernels</li>
-        <li>Boosting</li>
-        <li>Information theory: Shannon entropy and KL-divergence</li>
-        <li>Occam bounds and PAC-Bayes</li>
-        <li>Compression bounds</li>
-        <li>Active learning</li>
-        <li>Decision-theoretic online learning</li>
-        <li>Prediction with expert advice</li>
-        <li>Bandits</li>
-        <li>Stochastic and online convex optimization</li>
-        <li>Online-to-batch conversion</li>
-    </ul>
-    <hr>
-
-    <h3>ATP-Tour-Analytics-2022</h3>
-    <p><strong>Description:</strong> I am a big tennis fan and I wanted to create a project that would allow me to analyze the ATP Tour data. The project was for a data science course I took at Ontario Tech University. The project involved analyzing the ATP Tour data from 2022 and creating visualizations to show the trends and patterns in the data.</p>
-    <p><strong>Technologies Used:</strong> R, API Scripts (Node.js)</p>
-    <p><a href="https://github.com/TylerTrott/ATP-Tour-Analytics-2022">GitHub Repo</a> | <a href="ATP2022Analysis.html">Live Demo</a></p>
-
-    <h2>Notable Technical Writing and Documentation Pieces</h2>
-    <h3>docs.atsign.com Webpage</h3>
-    <p><strong>Description:</strong> The atSDK documentation webpage is a comprehensive guide to the atSDK libraries. The documentation covers the installation, configuration, and usage of the atSDK libraries. The documentation also includes code examples and tutorials to help developers get started with the atSDK.</p>
-    <p><a href="https://docs.atsign.com/">Live Site</a></p>
-
-    <hr>
-
-    <h3>Medium</h3>
-    <p><strong>Description:</strong> I have written several articles on Medium about software engineering, cybersecurity, and other topics. Unfortunately, as my account was created with my Atsign email, I no longer have access to these personally uploaded blogs. However, the main company page still exists where I contributed much of the work. I have also added my personal page.</p>
-    <p><a href="https://medium.com/@atsigncompany">Medium Page</a> | <a href="https://medium.com/@tyler.trott">Personal Medium Page</a></p>
-
-    <hr>
-
-    <h3>AtsignCo Youtube</h3>
-    <p><strong>Description:</strong> During my tenure at Atsign, I was in charge of the YouTube channel. I had created several video tutorials for the atSDK libraries, using Atsign technology, amongst hosting events for our developer community. In addition to these, I also hosted several podcasts on the channel. The video tutorials themselves covered the installation, configuration, and usage of the atSDK libraries and atProtocol itself. The video tutorials also included code examples and tutorials to help developers get started with the atSDK.</p>
-    <p><a href="https://www.youtube.com/@AtsignCo">YouTube Channel</a></p>
-
-    <hr>
-
-    <h3>Intro to BLoC</h3>
-    <p><strong>Description:</strong> In 2022, I was the main panel speaker for a Flutter Vancouver Meetup. I presented on the topic of BLoC (Business Logic Component) and how it can be used to manage state in Flutter applications. The presentation included an overview of BLoC, how it works, and how it can be used in Flutter applications.</p>
-    <p><a href="https://www.youtube.com/watch?v=Q6wbH4bFQsw">YouTube Video</a></p>
-
-    <h2>Work Experience</h2>
-    <h3>Technical Solutions Architect, Atsign (Aug 2020 - January 2025)</h3>
-    <ul>
-        <li>Software engineering company's protocol, including microprocessor development and application integration.</li>
-        <li>Assisted in project management, QA, and oversaw internship program development.</li>
-        <li>Forged partnerships with insurance carriers, brokers, and secured product endorsements.</li>
-        <li>Designed business strategies integrating cybersecurity tech into insurance policies.</li>
-        <li>Directed project management and content for developer engagement and collaboration.</li>
-    </ul>
-
-    <h3>Summer Intern, 'Intro-to-Insurance' Programme, BFIS — Chicago, IL (Summer 2024)</h3>
-    <ul>
-        <li>Completed a 2-week internship, gaining knowledge of insurance types, reinsurance, captive management, and syndicates.</li>
-        <li>Explored regulatory processes, legal principles, and the social/economic impact of insurance.</li>
-        <li>Engaged with top industry companies like Travelers, Lockton, and MunichRe amongst others.</li>
-    </ul>
-
-    <h3>Professor Assistant, University of Massachusetts - Boston (Sep 2022 - Sept 2023)</h3>
-    <ul>
-        <li>Served as an external lecturer of Software Engineering practices.</li>
-        <li>Created, implemented, and executed course outlines.</li>
-        <li>Instructed students on design and implementation of software on microcontrollers/processors.</li>
-    </ul>
-
-    <h3>Statistical Database Intern, Department of Statistics - Bermuda (Jan 2020 - Aug 2020)</h3>
-    <ul>
-        <li>Developed/maintained statistical databases using SQL for accurate data management/reporting.</li>
-        <li>Analyzed Household Income and Expenditure Survey data, applying statistical techniques to identify trends and insights.</li>
-        <li>Performed data querying, analysis, and visualization with tools like Python, R, and Tableau.</li>
-        <li>Assisted in census design and execution, including sampling, survey development, and data validation.</li>
-    </ul>
-
-    <h2>Contact</h2>
-    <ul>
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <ul>
         <li><strong>Email:</strong> <a href="mailto:tylertrott24@yahoo.com">tylertrott24@yahoo.com</a></li>
         <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tyler-t-b307b0107/">linkedin.com</a></li>
         <li><strong>GitHub:</strong> <a href="https://github.com/TylerTrott">github</a></li>
         <li><strong>UVic Project Website:</strong> <a href="https://studentweb.uvic.ca/~tylertrott">studentweb.uvic.ca/~tylertrott</a></li>
-    </ul>
+      </ul>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/tyler-t-b307b0107/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/TylerTrott" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://medium.com/@tyler.trott" target="_blank"><i class="fab fa-medium"></i></a>
+      </div>
+    </section>
+  </div>
 </body>
 </html>

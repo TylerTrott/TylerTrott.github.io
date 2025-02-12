@@ -5,6 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Proposal: Decentralised Federated Learning Framework for Traffic Optimisation in Smart Cities</title>
     <style>
+            .journey-map {
+              font-family: Arial, sans-serif;
+              max-width: 800px;
+              margin: auto;
+              padding: 20px;
+            }
+            
+            .journey-map h2 {
+              text-align: center;
+              color: #333;
+              font-size: 1.8em;
+              margin-bottom: 20px;
+            }
+          
+            .timeline {
+              position: relative;
+              padding-left: 30px;
+              border-left: 3px solid #007BFF;
+            }
+          
+            .timeline-item {
+              margin-bottom: 20px;
+              padding-left: 15px;
+              position: relative;
+            }
+          
+            .timeline-item::before {
+              content: "";
+              position: absolute;
+              left: -12px;
+              top: 5px;
+              width: 14px;
+              height: 14px;
+              background: #007BFF;
+              border-radius: 50%;
+            }
+          
+            .timeline-item h3 {
+              color: #007BFF;
+              font-size: 1.3em;
+              margin-bottom: 5px;
+            }
+          
+            .timeline-item p {
+              color: #555;
+              line-height: 1.5;
+            }
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
@@ -18,32 +65,138 @@
         a {
             color: #1a73e8;
         }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #1a73e8;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px #999;
+        }
+        .button:hover {background-color: #0b5ed7}
+        .button:active {
+            background-color: #0b5ed7;
+            box-shadow: 0 2px #666;
+            transform: translateY(2px);
+        }
+        .project-overview {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            line-height: 1.6;
+          }
+        
+          .project-title {
+            text-align: center;
+            color: #007BFF;
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+        
+          .overview-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 5px solid #007BFF;
+            margin-top: 20px;
+            border-radius: 8px;
+          }
+        
+          .overview-section h2 {
+            color: #333;
+            font-size: 1.6em;
+            margin-bottom: 10px;
+          }
+        
+          .overview-section p {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+          }
+        
+          .highlight {
+            background: #e3f2fd;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-weight: bold;
+          }
+        
+          .link-container {
+            text-align: center;
+            margin-top: 20px;
+          }
+        
+          .demo-link {
+            display: inline-block;
+            background: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+          }
+        
+          .demo-link:hover {
+            background: #0056b3;
+          }
     </style>
 </head>
 <body>
-    <h1>Decentralised Federated Learning Framework for Traffic Optimisation in Smart Cities</h1>
-    
-    <h2>Project Overview</h2>
-    <p>This project addresses inefficiencies in traffic light synchronization that disrupt traffic flow and waste time. Current systems with intersection-based sensors fail to account for the broader flow of traffic between adjacent intersections. To resolve this, the proposed solution involves developing a decentralized system utilizing IoT devices within a dedicated network and a Federated Learning Framework.</p>
-    
-    <p>The IoT devices will operate exclusively within their own secure network, collaborating only with each other and the learning algorithm. This ensures seamless peer-to-peer data sharing and processing without external interference. The system will optimize traffic flow using inflow-outflow equations, particularly effective in areas with one-way roads. By collecting real-time traffic data and continuously updating through decentralized learning over days, weeks, and months, the system will enable smart, adaptive synchronization of traffic lights. This approach enhances urban traffic management and minimizes congestion.</p>
-    
-    <p>Given that this is peer-to-peer networking, I’ll be analyzing various federated network architectures and some proof of concept for the sensors to be capable of existing in such an infrastructure. The learning portion will be covered through my mathematical proofs during my time in CSC 431 which should, by the time of the project submission date, be fleshed out enough to detail a proof of concept plan, what implementation would look like, resources required, etc. It is unlikely that I will be able to flesh out anything physically but have found an open-source project that actually displays the number of red vs green lights on top of the number of cars waiting vs the number of cars flowing, which will help with the math proofs and playing around with the communication between sensors at intersections. Demo can be found here: <a href="https://demos.nstream.io/traffic/" target="_blank">https://demos.nstream.io/traffic/</a>.</p>
-    
-    <h2>Journey Map (February 7 - April 11)</h2>
-    <h3>February 7 - February 21</h3>
-    <p>Initial research and literature review on decentralized systems, IoT devices, and Federated Learning Frameworks. Begin drafting initial project proposal and identifying key components and technologies required.</p>
-    
-    <h3>February 22 - March 7</h3>
-    <p>Develop a detailed plan for the decentralized network architecture. Start working on mathematical proofs for traffic optimization using inflow-outflow equations. Begin exploring the open-source project for traffic light synchronization.</p>
-    
-    <h3>March 8 - March 21</h3>
-    <p>Continue refining the network architecture and mathematical proofs. Conduct simulations and experiments using the open-source project to validate theoretical models. Document findings and adjust the project plan as necessary.</p>
-    
-    <h3>March 22 - April 4</h3>
-    <p>Finalize the proof of concept for the decentralized system. Prepare detailed documentation on the implementation plan, required resources, and potential challenges. Begin drafting the final project report.</p>
-    
-    <h3>April 5 - April 11</h3>
-    <p>Complete the final project report, including all findings, proofs, and implementation details. Prepare a presentation summarizing the project and its outcomes. Submit the project report and presentation.</p>
+    <a href="index.html" class="button">Return to Main Page</a>
+    <div class="project-overview">
+        <h1 class="project-title">Decentralized Federated Learning Framework for Traffic Optimization in Smart Cities</h1>
+        
+        <div class="overview-section">
+          <h2>Project Overview</h2>
+          <p>This project tackles inefficiencies in traffic light synchronization, which disrupt traffic flow and cause unnecessary delays. Traditional sensor-based systems at intersections fail to consider the larger traffic network. To address this, the proposed solution employs a decentralized system with IoT devices and a <span class="highlight">Federated Learning Framework</span>.</p>
+          
+          <p>The IoT devices will function within a secure, self-contained network, communicating only with each other and the learning algorithm. This setup enables seamless peer-to-peer data sharing and processing, free from external interference. By leveraging <span class="highlight">inflow-outflow equations</span> and real-time traffic data, the system will dynamically adjust traffic signals to improve urban traffic flow over time.</p>
+          
+          <p>Since this system relies on peer-to-peer networking, various federated network architectures will be explored. The project will focus on developing mathematical proofs within CSC 431 to support the concept. A proof of concept plan will outline implementation details, required resources, and expected challenges. While a physical implementation is unlikely within the project’s timeline, an open-source simulation tool will provide valuable insights into traffic light behavior.</p>
+      
+          <div class="link-container">
+            <a href="https://demos.nstream.io/traffic/" target="_blank" class="demo-link">View Traffic Light Simulation</a>
+          </div>
+        </div>
+      </div>
+      
+    <div class="journey-map">
+        <h2>Journey Map (February 7 - April 11)</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>February 7 - February 21</h3>
+            <p>Initial research and literature review on decentralized systems, IoT devices, and Federated Learning Frameworks. Begin drafting the project proposal and identifying key components.</p>
+          </div>
+      
+          <div class="timeline-item">
+            <h3>February 22 - March 7</h3>
+            <p>Develop a detailed plan for decentralized network architecture. Start working on mathematical proofs for traffic optimization and explore an open-source traffic light synchronization project.</p>
+          </div>
+      
+          <div class="timeline-item">
+            <h3>March 8 - March 21</h3>
+            <p>Refine the network architecture and mathematical proofs. Conduct simulations and experiments to validate models, document findings, and adjust the project plan as necessary.</p>
+          </div>
+      
+          <div class="timeline-item">
+            <h3>March 22 - April 4</h3>
+            <p>Finalize the proof of concept, prepare implementation documentation, and outline challenges. Begin drafting the final project report.</p>
+          </div>
+      
+          <div class="timeline-item">
+            <h3>April 5 - April 11</h3>
+            <p>Complete the final report, including all findings, proofs, and implementation details. Prepare a presentation summarizing the project and submit all deliverables.</p>
+          </div>
+        </div>
+      </div>
+
+    <a href="index.html" class="button">Return to Main Page</a>
 </body>
 </html>
