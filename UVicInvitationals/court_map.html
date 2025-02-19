@@ -59,10 +59,17 @@
         }
         .logo {
             position: fixed;
-            bottom: 50px;
+            bottom: 20px;  /* Adjusted for more space at the bottom */
             right: 20px;
-            width: 100px;
+            width: 80px;  /* Adjusted size for mobile */
             height: auto;
+            z-index: 10;  /* Ensure the logo stays above other content */
+        }
+        @media (max-width: 600px) {
+            .logo {
+                width: 70px;  /* Adjust size on smaller screens */
+                bottom: 10px;  /* Reduce bottom spacing on mobile */
+            }
         }
     </style>
 </head>
