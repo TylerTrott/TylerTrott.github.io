@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UVic Invitationals 2025</title>
+    <style>
+        /* UVic Colors */
+        :root {
+            --uvic-blue: #003366;
+            --uvic-yellow: #FFCC33;
+            --uvic-green: #66CC33;
+            --text-color: #ffffff;
+            --button-hover: #002244;
+        }
+
+        /* Prevent Scrolling */
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--uvic-blue);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .menu {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .menu button {
+            width: 100%;
+            max-width: 300px;
+            padding: 15px;
+            margin: 10px auto;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            background-color: var(--uvic-yellow);
+            color: var(--uvic-blue);
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        .menu button:hover {
+            background-color: var(--button-hover);
+            color: var(--text-color);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            .menu button {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+
+        .logo {
+            position: absolute;
+            bottom: 50px;
+            right: 20px;
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <h1>UVic Invitationals 2025</h1>
+        <button onclick="location.href='match_submission.html'">Submit a Score</button>
+        <button onclick="location.href='match_schedule.html'">Match Schedule</button>
+        <button onclick="location.href='court_map.html'">Court Map</button>
+    </div>
+    <img src="invitationals/vikes.png" alt="UVic Logo" class="logo">
+</body>
+</html>

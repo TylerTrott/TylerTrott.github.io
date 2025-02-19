@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Result Submission</title>
+    <style>
+        :root {
+            --uvic-blue: #003366;
+            --uvic-yellow: #FFCC33;
+            --text-color: #ffffff;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--uvic-blue);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            font-size: 16px;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            background-color: var(--uvic-yellow);
+            color: var(--uvic-blue);
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #cca300;
+        }
+
+        .status {
+            margin-top: 10px;
+        }
+        .logo {
+            position: absolute;
+            bottom: 50px;
+            right: 20px;
+            width: 100px;
+            height: auto;
+        }
+
+        .back-button {
+            background-color: var(--uvic-yellow);
+            color: var(--uvic-blue);
+            padding: 8px 12px; /* Adjust padding for smaller button */
+            border: none;
+            cursor: pointer;
+            font-size: 14px; /* Smaller text */
+            width: auto; /* Ensure it’s not full width */
+            border-radius: 5px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background-color: #cca300;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="back-button" onclick="window.location.href='InvitationalsMain.html'">Back to Main</button>
+
+    <div class="container">
+        <h2>Submit Match Result</h2>
+
+        <form id="matchForm">
+            <label for="matchType">Match Type:</label>
+            <select id="matchType" required>
+                <option value="Men's">Men's</option>
+                <option value="Women's">Women's</option>
+                <option value="Mixed">Mixed</option>
+            </select>
+
+            <label for="yourTeam">Your Team:</label>
+            <select id="yourTeam" required>
+                <option value="" disabled selected>Select Your Team</option>
+                <option value="UVic A">UVic A</option>
+                <option value="UVic B">UVic B</option>
+                <option value="UBC A">UBC A</option>
+                <option value="UBC B">UBC B</option>
+                <option value="UW A">UW A</option>
+                <option value="UW B">UW B</option>
+                <option value="SFU A">SFU A</option>
+                <option value="SFU B">SFU B</option>
+            </select>
+
+            <label for="opponentTeam">Opponent Team:</label>
+            <select id="opponentTeam" required>
+                <option value="" disabled selected>Select Opponent Team</option>
+                <option value="UVic A">UVic A</option>
+                <option value="UVic B">UVic B</option>
+                <option value="UBC A">UBC A</option>
+                <option value="UBC B">UBC B</option>
+                <option value="UW A">UW A</option>
+                <option value="UW B">UW B</option>
+                <option value="SFU A">SFU A</option>
+                <option value="SFU B">SFU B</option>
+            </select>
+
+            <label for="finalScore">Final Score:</label>
+            <select id="finalScore" required>
+                <option value="" disabled selected>Select Final Score</option>
+                <option value="8-0">8-0</option>
+                <option value="8-1">8-1</option>
+                <option value="8-2">8-2</option>
+                <option value="8-3">8-3</option>
+                <option value="8-4">8-4</option>
+                <option value="8-5">8-5</option>
+                <option value="8-6">8-6</option>
+                <option value="8-7 (Won by Tiebreaker)">8-7 (Won by Tiebreaker)</option>
+            </select>
+
+            <label for="winner">Winning Team:</label>
+            <select id="winner" required>
+                <option value="" disabled selected>Select Winning Team</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <p class="status" id="statusMessage"></p>
+    </div>
+
+    <script>
+        const yourTeamDropdown = document.getElementById("yourTeam");
+        const opponentTeamDropdown = document.getElementById("opponentTeam");
+        const winnerDropdown = document.getElementById("winner");
+
+        function updateWinnerDropdown() {
+            winnerDropdown.innerHTML = '<option value="" disabled selected>Select Winning Team</option>';
+
+            const yourTeam = yourTeamDropdown.value;
+            const opponentTeam = opponentTeamDropdown.value;
+
+            if (yourTeam) {
+                let option1 = document.createElement("option");
+                option1.value = yourTeam;
+                option1.textContent = yourTeam;
+                winnerDropdown.appendChild(option1);
+            }
+
+            if (opponentTeam) {
+                let option2 = document.createElement("option");
+                option2.value = opponentTeam;
+                option2.textContent = opponentTeam;
+                winnerDropdown.appendChild(option2);
+            }
+        }
+
+        yourTeamDropdown.addEventListener("change", updateWinnerDropdown);
+        opponentTeamDropdown.addEventListener("change", updateWinnerDropdown);
+
+        document.getElementById("matchForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var data = {
+                matchType: document.getElementById("matchType").value,
+                yourTeam: yourTeamDropdown.value,
+                opponentTeam: opponentTeamDropdown.value,
+                finalScore: document.getElementById("finalScore").value,
+                winner: winnerDropdown.value
+            };
+
+            fetch("https://script.google.com/macros/s/AKfycbweJGinDEjhC-sndQ7Y4svtJn5L_W7FdEz7g-05fD0v52jAFUO6TJxlwcGysYVHhsrJnA/exec", { // Replace with your Google Apps Script URL
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(() => {
+                document.getElementById("statusMessage").innerText = "✅ Match submitted successfully!";
+                document.getElementById("matchForm").reset();
+                updateWinnerDropdown(); // Reset winner dropdown
+            })
+            .catch(() => {
+                document.getElementById("statusMessage").innerText = "❌ Error submitting match.";
+            });
+        });
+    </script>
+    <img src="invitationals/vikes.png" alt="UVic Logo" class="logo">
+</body>
+</html>

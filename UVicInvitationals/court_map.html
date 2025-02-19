@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Court Map</title>
+    <style>
+        :root {
+            --uvic-blue: #003366;
+            --uvic-yellow: #FFCC33;
+            --text-color: #ffffff;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--uvic-blue);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            background-color: var(--uvic-blue);
+            color: var(--uvic-yellow);
+            padding: 10px;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .court-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid var(--uvic-yellow);
+        }
+        .back-button {
+            background-color: var(--uvic-yellow);
+            color: var(--uvic-blue);
+            padding: 8px 12px; /* Adjust padding for smaller button */
+            border: none;
+            cursor: pointer;
+            font-size: 14px; /* Smaller text */
+            width: auto; /* Ensure it’s not full width */
+            border-radius: 5px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background-color: #cca300;
+        }
+        .logo {
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="back-button" onclick="window.location.href='InvitationalsMain.html'">Back to Main</button>
+    <h1>Oak Bay Tennis Court Facility Map</h1>
+    <div class="court-container">
+        <img src="invitationals/tenniscourts.png" alt="Tennis Courts Map">
+    </div>
+    <br>
+    <h1>Top down from Google Earth</h1>
+    <div class="court-container">
+        <img src="invitationals/GE-topdown.png" alt="Tennis Courts Map">
+    </div>
+    <img src="invitationals/vikes.png" alt="UVic Logo" class="logo" style="border: none;">
+</body>
+</html>
