@@ -148,10 +148,65 @@
         .back-button:hover {
             background-color: #cca300;
         }
+        @media (max-width: 768px) {
+            table {
+                font-size: 14px;
+                table-layout: fixed;  /* Ensure the table stays responsive */
+            }
+        
+            th, td {
+                padding: 8px;
+            }
+        
+            .container {
+                padding: 10px;
+            }
+        
+            .logo {
+                width: 80px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            /* Add horizontal scrolling to table */
+            table {
+                font-size: 12px;
+                overflow-x: auto;  /* Allow scrolling */
+                display: block;  /* Block-level to enable scrolling */
+                white-space: nowrap;  /* Prevent text from wrapping in cells */
+            }
+        
+            th, td {
+                text-align: left;
+                padding: 10px;
+                border: none;
+                border-bottom: 1px solid var(--table-header);
+            }
+        
+            th {
+                background-color: transparent;
+                color: var(--text-color);
+                font-weight: bold;
+            }
+        
+            tr {
+                margin-bottom: 10px;
+            }
+        
+            .container {
+                padding: 5px;
+            }
+        
+            .logo {
+                width: 60px;
+            }
+        }
+        
     </style>
 </head>
 <body>
     <button class="back-button" onclick="window.location.href='InvitationalsMain.html'">Back to Main</button>
+    <br><br><br>
     <div class="container">
         <h1>UVic Invitational 2025</h1>
         <h2>Match Schedule</h2>
