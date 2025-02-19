@@ -148,6 +148,7 @@
         .back-button:hover {
             background-color: #cca300;
         }
+
         @media (max-width: 768px) {
             table {
                 font-size: 14px;
@@ -167,13 +168,38 @@
             }
         }
         
+        @media (max-width: 768px) {
+            table {
+                font-size: 14px;
+                width: 100%;
+                table-layout: fixed; /* Ensure the table content remains responsive */
+            }
+        
+            th, td {
+                padding: 8px;
+            }
+        
+            .container {
+                padding: 10px;
+            }
+        
+            .logo {
+                width: 80px;
+            }
+        }
+        
         @media (max-width: 480px) {
-            /* Add horizontal scrolling to table */
+            /* Make sure table is responsive and can scroll horizontally */
+            .table-wrapper {
+                overflow-x: auto; /* Allow horizontal scrolling */
+                -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+                margin-bottom: 15px; /* Space between table and other content */
+            }
+        
             table {
                 font-size: 12px;
-                overflow-x: auto;  /* Allow scrolling */
-                display: block;  /* Block-level to enable scrolling */
-                white-space: nowrap;  /* Prevent text from wrapping in cells */
+                width: 100%;
+                table-layout: fixed; /* Maintain a consistent table layout */
             }
         
             th, td {
@@ -210,44 +236,57 @@
     <div class="container">
         <h1>UVic Invitational 2025</h1>
         <h2>Match Schedule</h2>
-
+    
         <h3>Saturday Matches</h3>
-        <table>
-            <tr>
-                <th>Time</th>
-                <th>Court 1</th>
-                <th>Court 2</th>
-                <th>Court 4</th>
-                <th>Court 5</th>
-            </tr>
-            <tr><td>11:00 AM</td><td>Warm Up</td><td>Warm Up</td><td>Warm Up</td><td>Warm Up</td></tr>
-            <tr><td>12:00 PM</td><td>UVic A / UW B</td><td>UVic A / UW B</td><td>UVic A / UW B</td><td>UBC A / SFU A</td></tr>
-            <tr><td>1:00 PM</td><td>UBC A / SFU A</td><td>UBC A / SFU A</td><td>UW A / UBC B</td><td>UW A / UBC B</td></tr>
-            <tr><td>2:00 PM</td><td>UW A / UBC B</td><td>SFU B / UVic B</td><td>SFU B / UVic B</td><td>SFU B / UVic B</td></tr>
-            <tr><td>3:00 PM</td><td>UVic A / UBC A</td><td>UVic A / UBC A</td><td>UVic A / UBC A</td><td>SFU A / UW A</td></tr>
-            <tr><td>4:00 PM</td><td>SFU A / UW A</td><td>SFU A / UW A</td><td>SFU B / UW B</td><td>SFU B / UW B</td></tr>
-            <tr><td>5:00 PM</td><td>SFU B / UW B</td><td>UVic B / UBC B</td><td>UVic B / UBC B</td><td>UVic B / UBC B</td></tr>
-            <tr><td>6:00 PM</td><td>UVic A / UW A</td><td>UVic A / UW A</td><td>SFU B / UBC A</td><td>SFU B / UBC A</td></tr>
-        </table>
-
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Court 1</th>
+                    <th>Court 2</th>
+                    <th>Court 4</th>
+                    <th>Court 5</th>
+                </tr>
+                <tr><td>11:00 AM</td><td>Warm Up</td><td>Warm Up</td><td>Warm Up</td><td>Warm Up</td></tr>
+                <tr><td>12:00 PM</td><td>UVic A / UW B</td><td>UVic A / UW B</td><td>UVic A / UW B</td><td>UBC A / SFU A</td></tr>
+                <tr><td>1:00 PM</td><td>UBC A / SFU A</td><td>UBC A / SFU A</td><td>UW A / UBC B</td><td>UW A / UBC B</td></tr>
+                <tr><td>2:00 PM</td><td>UW A / UBC B</td><td>SFU B / UVic B</td><td>SFU B / UVic B</td><td>SFU B / UVic B</td></tr>
+                <tr><td>3:00 PM</td><td>UVic A / UBC A</td><td>UVic A / UBC A</td><td>UVic A / UBC A</td><td>SFU A / UW A</td></tr>
+                <tr><td>4:00 PM</td><td>SFU A / UW A</td><td>SFU A / UW A</td><td>SFU B / UW B</td><td>SFU B / UW B</td></tr>
+                <tr><td>5:00 PM</td><td>SFU B / UW B</td><td>UVic B / UBC B</td><td>UVic B / UBC B</td><td>UVic B / UBC B</td></tr>
+                <tr><td>6:00 PM</td><td>UVic A / UW A</td><td>UVic A / UW A</td><td>SFU B / UBC A</td><td>SFU B / UBC A</td></tr>
+            </table>
+        </div>
+    
         <h3>Sunday Matches</h3>
-        <table>
-            <tr>
-                <th>Time</th>
-                <th>Court 1</th>
-                <th>Court 2</th>
-                <th>Court 4</th>
-                <th>Court 5</th>
-            </tr>
-            <tr><td>10:00 AM</td><td>SFU A / UW B</td><td>SFU A / UW B</td><td>SFU A / UW B</td><td>UBC B / UVic B</td></tr>
-            <tr><td>11:00 AM</td><td>UBC B / UVic B</td><td>UBC B / UVic B</td><td>UVic A / SFU B</td><td>UVic A / SFU B</td></tr>
-            <tr><td>12:00 PM</td><td>UVic A / SFU B</td><td>UVic B / UW A</td><td>UVic B / UW A</td><td>UVic B / UW A</td></tr>
-            <tr><td>1:00 PM</td><td>UBC A / UW B</td><td>UBC A / UW B</td><td>UBC B / SFU A</td><td>UBC B / SFU A</td></tr>
-            <tr><td>2:00 PM</td><td>UBC A / UW B (if needed)</td><td></td><td>UBC B / SFU A (if needed)</td><td></td></tr>
-            <tr><td>3:00 PM</td><td colspan="4">Finals</td></tr>
-            <tr><td>4:00 PM</td><td>Tie breaker (if needed)</td><td></td><td>3rd/4th mixed doubles</td><td></td></tr>
-            <tr><td>5:00 PM</td><td colspan="4">Trophy ceremony and closing speech</td></tr>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Court 1</th>
+                    <th>Court 2</th>
+                    <th>Court 4</th>
+                    <th>Court 5</th>
+                </tr>
+                <tr><td>10:00 AM</td><td>SFU A / UW B</td><td>SFU A / UW B</td><td>SFU A / UW B</td><td>UBC B / UVic B</td></tr>
+                <tr><td>11:00 AM</td><td>UBC B / UVic B</td><td>UBC B / UVic B</td><td>UVic A / SFU B</td><td>UVic A / SFU B</td></tr>
+                <tr><td>12:00 PM</td><td>UVic A / SFU B</td><td>UVic B / UW A</td><td>UVic B / UW A</td><td>UVic B / UW A</td></tr>
+                <tr><td>1:00 PM</td><td>UBC A / UW B</td><td>UBC A / UW B</td><td>UBC B / SFU A</td><td>UBC B / SFU A</td></tr>
+                <tr><td>2:00 PM</td><td>UBC A / UW B (if needed)</td><td></td><td>UBC B / SFU A (if needed)</td><td></td></tr>
+                <tr><td>3:00 PM</td><td colspan="4">Finals</td></tr>
+                <tr><td>4:00 PM</td><td>Tie breaker (if needed)</td><td></td><td>3rd/4th mixed doubles</td><td></td></tr>
+                <tr><td>5:00 PM</td><td colspan="4">Trophy ceremony and closing speech</td></tr>
+            </table>
+        </div>
+    
+        <div class="rounds"></div>
+        <h3>Match Rounds</h3>
+        <p><strong>Round 1:</strong> UVic A vs UW B | UBC A vs SFU A | UW A vs UBC B | SFU B vs UVic B</p>
+        <p><strong>Round 2:</strong> UVic A vs UBC A | SFU A vs UW A | SFU B vs UW B | UVic B vs UBC B</p>
+        <p><strong>Round 3:</strong> UVic A vs UW A | SFU B vs UBC A | SFU A vs UW B | UBC B vs UVic B</p>
+        <p><strong>Round 4:</strong> UVic A vs SFU B | UVic B vs UW A | UBC A vs UW B | UBC B vs SFU A</p>
+    </div>
+    
 
         <div class="rounds"></div>
             <h3>Match Rounds</h3>
