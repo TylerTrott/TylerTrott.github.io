@@ -1,299 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UVic Invitational Match Schedule</title>
-  <style>
-    /* UVic Colors */
-    :root {
-      --uvic-blue: #003366;
-      --uvic-yellow: #FFCC33;
-      --uvic-green: #66CC33;
-      --text-color: #000000;
-      --table-header: #002244;
-      --table-row-light: #e6e6e6;
-      --table-row-dark: #cccccc;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UVic Invitational Match Schedule</title>
+    <style>
+        /* UVic Colors */
+        :root {
+            --uvic-blue: #003366;
+            --uvic-yellow: #FFCC33;
+            --uvic-green: #66CC33;
+            --text-color: #000000;
+            --table-header: #002244;
+            --table-row-light: #e6e6e6;
+            --table-row-dark: #cccccc;
+        }
 
-    body {
-      font-family: 'Lato', sans-serif;
-      background-color: var(--uvic-blue);
-      color: var(--text-color);
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--uvic-blue);
+            color: var(--text-color);
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
 
-    h1,
-    h2 {
-      color: var(--uvic-yellow);
-    }
+        h1,
+        h2 {
+            color: var(--uvic-yellow);
+        }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      background: rgba(0, 0, 0, 0.2);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
 
-    /* Wrap tables in a scrollable container */
-    .table-wrapper {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      margin-top: 10px;
-    }
+        /* Wrap tables in a scrollable container */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-top: 10px;
+        }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      table-layout: fixed;
-    }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
 
-    th,
-    td {
-      border: 1px solid var(--table-header);
-      padding: 12px;
-      text-align: center;
-      white-space: nowrap;
-    }
+        th,
+        td {
+            border: 1px solid var(--table-header);
+            padding: 12px;
+            text-align: center;
+            white-space: nowrap;
+        }
 
-    th {
-      background-color: var(--table-header);
-      color: var(--text-color);
-    }
+        th {
+            background-color: var(--table-header);
+            color: var(--text-color);
+        }
 
-    tr:nth-child(even) {
-      background-color: var(--table-row-light);
-    }
+        tr:nth-child(even) {
+            background-color: var(--table-row-light);
+        }
 
-    tr:nth-child(odd) {
-      background-color: var(--table-row-dark);
-    }
+        tr:nth-child(odd) {
+            background-color: var(--table-row-dark);
+        }
 
-    .rounds {
-      margin-top: 30px;
-    }
+        .rounds {
+            margin-top: 30px;
+        }
 
-    .footer {
-      margin-top: 20px;
-      font-size: 14px;
-      color: var(--uvic-yellow);
-    }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--uvic-yellow);
+        }
 
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      table {
-        font-size: 14px;
-      }
-      th,
-      td {
-        padding: 8px;
-      }
-      .container {
-        padding: 10px;
-      }
-      .logo {
-        width: 80px;
-      }
-    }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            table {
+                font-size: 14px;
+            }
+            th,
+            td {
+                padding: 10px;
+            }
+            .container {
+                padding: 10px;
+            }
+            .logo {
+                width: 80px;
+            }
+        }
 
-    @media (max-width: 480px) {
-      table {
-        font-size: 12px;
-      }
-      th,
-      td {
-        padding: 10px;
-      }
-      .container {
-        padding: 5px;
-      }
-      .logo {
-        width: 60px;
-      }
-    }
+        @media (max-width: 480px) {
+            table {
+                font-size: 12px;
+            }
+            .table-wrapper {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                margin-bottom: 15px;
+              }
+            
+              /* Allow the table to be wider than the container */
+              .table-wrapper table {
+                min-width: 600px; /* Adjust this value as needed */
+                table-layout: auto; /* Let columns adjust based on content */
+                white-space: normal; /* Allow text to wrap */
+                font-size: 12px;
+              }
+              th,
+              td {
+                text-align: left;
+                padding: 10px;
+                border: none;
+                border-bottom: 1px solid var(--table-header);
+              }
+            
+              th {
+                background-color: transparent;
+                color: var(--text-color);
+                font-weight: bold;
+              }
+            
+              .container {
+                padding: 5px;
+              }
+            
+              .logo {
+                width: 60px;
+              }
+        }
 
-    /* Logo and back-button */
-    .logo {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 100px;
-      height: auto;
-    }
+        /* Logo and back-button */
+        .logo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: auto;
+        }
 
-    .back-button {
-      background-color: var(--uvic-yellow);
-      color: var(--uvic-blue);
-      padding: 8px 12px;
-      border: none;
-      cursor: pointer;
-      font-size: 14px;
-      width: auto;
-      border-radius: 5px;
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      text-align: center;
-    }
+        .back-button {
+            background-color: var(--uvic-yellow);
+            color: var(--uvic-blue);
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            width: auto;
+            border-radius: 5px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-align: center;
+        }
 
-    .back-button:hover {
-      background-color: #cca300;
-    }
-  </style>
+        .back-button:hover {
+            background-color: #cca300;
+        }
+    </style>
 </head>
 <body>
-  <button class="back-button" onclick="window.location.href='InvitationalsMain.html'">
-    Back to Main
-  </button>
-  <br /><br /><br />
-  <div class="container">
-    <h1>UVic Invitational 2025</h1>
-    <h2>Match Schedule</h2>
+    <button class="back-button" onclick="window.location.href='InvitationalsMain.html'">
+        Back to Main
+    </button>
+    <br /><br /><br />
+    <div class="container">
+        <h1>UVic Invitational 2025</h1>
+        <h2>Match Schedule</h2>
 
-    <h3>Saturday Matches</h3>
-    <div class="table-wrapper">
-      <table>
-        <tr>
-          <th>Time</th>
-          <th>Court 1</th>
-          <th>Court 2</th>
-          <th>Court 4</th>
-          <th>Court 5</th>
-        </tr>
-        <tr>
-          <td>11:00 AM</td>
-          <td>Warm Up</td>
-          <td>Warm Up</td>
-          <td>Warm Up</td>
-          <td>Warm Up</td>
-        </tr>
-        <tr>
-          <td>12:00 PM</td>
-          <td>UVic A / UW B</td>
-          <td>UVic A / UW B</td>
-          <td>UVic A / UW B</td>
-          <td>UBC A / SFU A</td>
-        </tr>
-        <tr>
-          <td>1:00 PM</td>
-          <td>UBC A / SFU A</td>
-          <td>UBC A / SFU A</td>
-          <td>UW A / UBC B</td>
-          <td>UW A / UBC B</td>
-        </tr>
-        <tr>
-          <td>2:00 PM</td>
-          <td>UW A / UBC B</td>
-          <td>SFU B / UVic B</td>
-          <td>SFU B / UVic B</td>
-          <td>SFU B / UVic B</td>
-        </tr>
-        <tr>
-          <td>3:00 PM</td>
-          <td>UVic A / UBC A</td>
-          <td>UVic A / UBC A</td>
-          <td>UVic A / UBC A</td>
-          <td>SFU A / UW A</td>
-        </tr>
-        <tr>
-          <td>4:00 PM</td>
-          <td>SFU A / UW A</td>
-          <td>SFU A / UW A</td>
-          <td>SFU B / UW B</td>
-          <td>SFU B / UW B</td>
-        </tr>
-        <tr>
-          <td>5:00 PM</td>
-          <td>SFU B / UW B</td>
-          <td>UVic B / UBC B</td>
-          <td>UVic B / UBC B</td>
-          <td>UVic B / UBC B</td>
-        </tr>
-        <tr>
-          <td>6:00 PM</td>
-          <td>UVic A / UW A</td>
-          <td>UVic A / UW A</td>
-          <td>SFU B / UBC A</td>
-          <td>SFU B / UBC A</td>
-        </tr>
-      </table>
-    </div>
+        <h3>Saturday Matches</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Court 1</th>
+                    <th>Court 2</th>
+                    <th>Court 4</th>
+                    <th>Court 5</th>
+                </tr>
+                <tr>
+                    <td>11:00 AM</td>
+                    <td>Warm Up</td>
+                    <td>Warm Up</td>
+                    <td>Warm Up</td>
+                    <td>Warm Up</td>
+                </tr>
+                <tr>
+                    <td>12:00 PM</td>
+                    <td>UVic A / UW B</td>
+                    <td>UVic A / UW B</td>
+                    <td>UVic A / UW B</td>
+                    <td>UBC A / SFU A</td>
+                </tr>
+                <tr>
+                    <td>1:00 PM</td>
+                    <td>UBC A / SFU A</td>
+                    <td>UBC A / SFU A</td>
+                    <td>UW A / UBC B</td>
+                    <td>UW A / UBC B</td>
+                </tr>
+                <tr>
+                    <td>2:00 PM</td>
+                    <td>UW A / UBC B</td>
+                    <td>SFU B / UVic B</td>
+                    <td>SFU B / UVic B</td>
+                    <td>SFU B / UVic B</td>
+                </tr>
+                <tr>
+                    <td>3:00 PM</td>
+                    <td>UVic A / UBC A</td>
+                    <td>UVic A / UBC A</td>
+                    <td>UVic A / UBC A</td>
+                    <td>SFU A / UW A</td>
+                </tr>
+                <tr>
+                    <td>4:00 PM</td>
+                    <td>SFU A / UW A</td>
+                    <td>SFU A / UW A</td>
+                    <td>SFU B / UW B</td>
+                    <td>SFU B / UW B</td>
+                </tr>
+                <tr>
+                    <td>5:00 PM</td>
+                    <td>SFU B / UW B</td>
+                    <td>UVic B / UBC B</td>
+                    <td>UVic B / UBC B</td>
+                    <td>UVic B / UBC B</td>
+                </tr>
+                <tr>
+                    <td>6:00 PM</td>
+                    <td>UVic A / UW A</td>
+                    <td>UVic A / UW A</td>
+                    <td>SFU B / UBC A</td>
+                    <td>SFU B / UBC A</td>
+                </tr>
+            </table>
+        </div>
 
-    <h3>Sunday Matches</h3>
-    <div class="table-wrapper">
-      <table>
-        <tr>
-          <th>Time</th>
-          <th>Court 1</th>
-          <th>Court 2</th>
-          <th>Court 4</th>
-          <th>Court 5</th>
-        </tr>
-        <tr>
-          <td>10:00 AM</td>
-          <td>SFU A / UW B</td>
-          <td>SFU A / UW B</td>
-          <td>SFU A / UW B</td>
-          <td>UBC B / UVic B</td>
-        </tr>
-        <tr>
-          <td>11:00 AM</td>
-          <td>UBC B / UVic B</td>
-          <td>UBC B / UVic B</td>
-          <td>UVic A / SFU B</td>
-          <td>UVic A / SFU B</td>
-        </tr>
-        <tr>
-          <td>12:00 PM</td>
-          <td>UVic A / SFU B</td>
-          <td>UVic B / UW A</td>
-          <td>UVic B / UW A</td>
-          <td>UVic B / UW A</td>
-        </tr>
-        <tr>
-          <td>1:00 PM</td>
-          <td>UBC A / UW B</td>
-          <td>UBC A / UW B</td>
-          <td>UBC B / SFU A</td>
-          <td>UBC B / SFU A</td>
-        </tr>
-        <tr>
-          <td>2:00 PM</td>
-          <td>UBC A / UW B (if needed)</td>
-          <td></td>
-          <td>UBC B / SFU A (if needed)</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>3:00 PM</td>
-          <td colspan="4">Finals</td>
-        </tr>
-        <tr>
-          <td>4:00 PM</td>
-          <td>Tie breaker (if needed)</td>
-          <td></td>
-          <td>3rd/4th mixed doubles</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>5:00 PM</td>
-          <td colspan="4">Trophy ceremony and closing speech</td>
-        </tr>
-      </table>
-    </div>
+        <h3>Sunday Matches</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Court 1</th>
+                    <th>Court 2</th>
+                    <th>Court 4</th>
+                    <th>Court 5</th>
+                </tr>
+                <tr>
+                    <td>10:00 AM</td>
+                    <td>SFU A / UW B</td>
+                    <td>SFU A / UW B</td>
+                    <td>SFU A / UW B</td>
+                    <td>UBC B / UVic B</td>
+                </tr>
+                <tr>
+                    <td>11:00 AM</td>
+                    <td>UBC B / UVic B</td>
+                    <td>UBC B / UVic B</td>
+                    <td>UVic A / SFU B</td>
+                    <td>UVic A / SFU B</td>
+                </tr>
+                <tr>
+                    <td>12:00 PM</td>
+                    <td>UVic A / SFU B</td>
+                    <td>UVic B / UW A</td>
+                    <td>UVic B / UW A</td>
+                    <td>UVic B / UW A</td>
+                </tr>
+                <tr>
+                    <td>1:00 PM</td>
+                    <td>UBC A / UW B</td>
+                    <td>UBC A / UW B</td>
+                    <td>UBC B / SFU A</td>
+                    <td>UBC B / SFU A</td>
+                </tr>
+                <tr>
+                    <td>2:00 PM</td>
+                    <td>UBC A / UW B (if needed)</td>
+                    <td></td>
+                    <td>UBC B / SFU A (if needed)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3:00 PM</td>
+                    <td colspan="4">Finals</td>
+                </tr>
+                <tr>
+                    <td>4:00 PM</td>
+                    <td>Tie breaker (if needed)</td>
+                    <td></td>
+                    <td>3rd/4th mixed doubles</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5:00 PM</td>
+                    <td colspan="4">Trophy ceremony and closing speech</td>
+                </tr>
+            </table>
+        </div>
 
-    <div class="rounds">
-      <h3>Match Rounds</h3>
-      <p><strong>Round 1:</strong> UVic A vs UW B | UBC A vs SFU A | UW A vs UBC B | SFU B vs UVic B</p>
-      <p><strong>Round 2:</strong> UVic A vs UBC A | SFU A vs UW A | SFU B vs UW B | UVic B vs UBC B</p>
-      <p><strong>Round 3:</strong> UVic A vs UW A | SFU B vs UBC A | SFU A vs UW B | UBC B vs UVic B</p>
-      <p><strong>Round 4:</strong> UVic A vs SFU B | UVic B vs UW A | UBC A vs UW B | UBC B vs SFU A</p>
+        <div class="rounds">
+            <h3>Match Rounds</h3>
+            <p><strong>Round 1:</strong> UVic A vs UW B | UBC A vs SFU A | UW A vs UBC B | SFU B vs UVic B</p>
+            <p><strong>Round 2:</strong> UVic A vs UBC A | SFU A vs UW A | SFU B vs UW B | UVic B vs UBC B</p>
+            <p><strong>Round 3:</strong> UVic A vs UW A | SFU B vs UBC A | SFU A vs UW B | UBC B vs UVic B</p>
+            <p><strong>Round 4:</strong> UVic A vs SFU B | UVic B vs UW A | UBC A vs UW B | UBC B vs SFU A</p>
+        </div>
     </div>
-  </div>
-  <img src="invitationals/vikes.png" alt="UVic Logo" class="logo" />
+    <img src="invitationals/vikes.png" alt="UVic Logo" class="logo" />
 </body>
 </html>
