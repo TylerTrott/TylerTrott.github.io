@@ -202,16 +202,17 @@
             fetch("https://script.google.com/macros/s/AKfycby02bnwwqq2JoJFZQNCKZRHlI7ggnSqFVXo8LVxG1gsJg-HBl_acDEIU6MhCR4g7O9HZg/exec", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "text/plain;charset=UTF-8"  // Changed header to avoid preflight
                 },
                 body: JSON.stringify(data)
             })
             .then(() => {
                 document.getElementById("statusMessage").innerText = "✅ Match submitted successfully!";
                 document.getElementById("matchForm").reset();
-                updateWinnerDropdown(); // Reset winner dropdown
+                updateWinnerDropdown();
             })
-            .catch(() => {
+            .catch((error) => {
+                console.error("Fetch error:", error);
                 document.getElementById("statusMessage").innerText = "❌ Error submitting match.";
             });
         });
