@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Proposal: Decentralised Federated Learning Framework for Traffic Optimisation in Smart Cities</title>
+  <style>
+    .journey-map {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    
+    .journey-map h2 {
+      text-align: center;
+      color: #333;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+    
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+      border-left: 3px solid #007BFF;
+    }
+    
+    .timeline-item {
+      margin-bottom: 20px;
+      padding-left: 15px;
+      position: relative;
+    }
+    
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -12px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      background: #007BFF;
+      border-radius: 50%;
+    }
+    
+    .timeline-item h3 {
+      color: #007BFF;
+      font-size: 1.3em;
+      margin-bottom: 5px;
+    }
+    
+    .timeline-item p {
+      color: #555;
+      line-height: 1.5;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    p {
+      line-height: 1.6;
+    }
+    a {
+      color: #1a73e8;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #1a73e8;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 4px #999;
+    }
+    .button:hover {background-color: #0b5ed7}
+    .button:active {
+      background-color: #0b5ed7;
+      box-shadow: 0 2px #666;
+      transform: translateY(2px);
+    }
+    .project-overview {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+  
+    .project-title {
+      text-align: center;
+      color: #007BFF;
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    .overview-section {
+      background: #f8f9fa;
+      padding: 20px;
+      border-left: 5px solid #007BFF;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+  
+    .overview-section h2 {
+      color: #333;
+      font-size: 1.6em;
+      margin-bottom: 10px;
+    }
+  
+    .overview-section p {
+      color: #555;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+  
+    .highlight {
+      background: #e3f2fd;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  
+    .link-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .demo-link {
+      display: inline-block;
+      background: #007BFF;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  
+    .demo-link:hover {
+      background: #0056b3;
+    }
+
+    .bi-weekly-updates {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    
+    .bi-weekly-updates h2 {
+      text-align: center;
+      color: #333;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+    
+    .update-timeline {
+      position: relative;
+      padding-left: 30px;
+      border-left: 3px solid #007BFF;
+    }
+    
+    .update-item {
+      margin-bottom: 20px;
+      padding-left: 15px;
+      position: relative;
+    }
+    
+    .update-item::before {
+      content: "";
+      position: absolute;
+      left: -12px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      background: #007BFF;
+      border-radius: 50%;
+    }
+    
+    .update-item h3 {
+      color: #007BFF;
+      font-size: 1.3em;
+      margin-bottom: 5px;
+    }
+    
+    .update-item p {
+      color: #555;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="button">Return to Main Page</a>
+  <div class="project-overview">
+    <h1 class="project-title">Decentralized Federated Learning Framework for Traffic Optimization in Smart Cities</h1>
+    
+    <div class="overview-section">
+      <h2>Project Overview</h2>
+      <p>This project tackles inefficiencies in traffic light synchronization, which disrupt traffic flow and cause unnecessary delays. Traditional sensor-based systems at intersections fail to consider the larger traffic network. To address this, the proposed solution employs a decentralized system with IoT devices and a <span class="highlight">Federated Learning Framework</span>.</p>
+      
+      <p>The IoT devices will function within a secure, self-contained network, communicating only with each other and the learning algorithm. This setup enables seamless peer-to-peer data sharing and processing, free from external interference. By leveraging <span class="highlight">inflow-outflow equations</span> and real-time traffic data, the system will dynamically adjust traffic signals to improve urban traffic flow over time.</p>
+      
+      <p>Since this system relies on peer-to-peer networking, various federated network architectures will be explored. The project will focus on developing mathematical proofs within CSC 431 to support the concept. A proof of concept plan will outline implementation details, required resources, and expected challenges. While a physical implementation is unlikely within the project’s timeline, an open-source simulation tool will provide valuable insights into traffic light behavior.</p>
+    
+      <div class="link-container">
+      <a href="https://demos.nstream.io/traffic/" target="_blank" class="demo-link">View Traffic Light Simulation</a>
+      </div>
+    </div>
+    </div>
+    
+  <div class="journey-map">
+    <h2>Journey Map (February 7 - April 11)</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+      <h3>February 7 - February 21</h3>
+      <p>Initial research and literature review on decentralized systems, IoT devices, and Federated Learning Frameworks. Begin drafting the project proposal and identifying key components.</p>
+      </div>
+    
+      <div class="timeline-item">
+      <h3>February 22 - March 7</h3>
+      <p>Develop a detailed plan for decentralized network architecture. Start working on mathematical proofs for traffic optimization and explore an open-source traffic light synchronization project.</p>
+      </div>
+    
+      <div class="timeline-item">
+      <h3>March 8 - March 21</h3>
+      <p>Refine the network architecture and mathematical proofs. Conduct simulations and experiments to validate models, document findings, and adjust the project plan as necessary.</p>
+      </div>
+    
+      <div class="timeline-item">
+      <h3>March 22 - April 4</h3>
+      <p>Finalize the proof of concept, prepare implementation documentation, and outline challenges. Begin drafting the final project report.</p>
+      </div>
+    
+      <div class="timeline-item">
+      <h3>April 5 - April 11</h3>
+      <p>Complete the final report, including all findings, proofs, and implementation details. Prepare a presentation summarizing the project and submit all deliverables.</p>
+      </div>
+    </div>
+    </div>
+
+    <div class="bi-weekly-updates">
+      <h2>Bi-Weekly Updates</h2>
+      <div class="update-timeline">
+        <div class="update-item">
+          <h3>Update 1 - February 11</h3>
+          <p>Proposal Drafting: Began drafting the project proposal, clearly outlining the project’s objectives and key components.</p>
+          <a href="ProjectProposal.pdf" target="_blank" class="demo-link">Download PDF</a>
+        </div>
+        <div class="update-item">
+          <h3>Update 2 - February 21</h3>
+          <p>Biweekly Update Summary (February 7 – February 21, 2025):</p>
+          <p>Research Initiated: Conducted an extensive literature review focusing on decentralized systems, IoT devices, and federated learning frameworks.</p>
+          <p>Papers read:</p>
+          <ul>
+            <li><a href="https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=3a2fa7ae89f90061b2db7297a71a2458299dfc3a" target="_blank">Sensor Networks for Monitoring Traffic</a></li>
+            <li><a href="Urban_Traffic_Management_System_Survey.pdf">A Survey on Urban Traffic Management System Using Wireless Sensor Networks</a></li>
+            <li><a href="Using_sensor_networks_for_highway_and_traffic_applications.pdf">Using sensor networks for highway and traffic applications</a></li>
+            <li><a href="OpenSource_Federated_Learning.pdf">Open-Source Federated Learning Frameworks for IoT: A Comparative Review and Analysis</a></li>
+          </ul>
+          <p>Component Identification: Identified critical elements for the project, including the design of a secure decentralized network, the integration of a federated learning algorithm, and the use of simulation tools for traffic light optimization.</p>
+          <p>Next Steps: Planning to further develop the network architecture and initiate preliminary work on mathematical models and simulations.</p>
+          <a href="Bi-Weekly Update - Feb 21.pdf" target="_blank" class="demo-link">Download PDF</a>
+        </div>
+        <!-- Add more updates as needed -->
+      </div>
+    </div>
+
+  <a href="index.html" class="button">Return to Main Page</a>
+</body>
+</html>
