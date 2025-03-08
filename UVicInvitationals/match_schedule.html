@@ -58,7 +58,9 @@
             border: 1px solid var(--table-header);
             padding: 12px;
             text-align: center;
-            white-space: nowrap;
+            white-space: break-word;
+            word-wrap: break-word; /* Allows breaking long words */
+            overflow-wrap: break-word; /* Ensures words wrap properly */
         }
 
         th {
@@ -92,6 +94,8 @@
             th,
             td {
                 padding: 11px;
+                word-wrap: break-word; /* Allows breaking long words */
+                overflow-wrap: break-word; /* Ensures words wrap properly */
             }
             .container {
                 padding: 11px;
@@ -103,42 +107,86 @@
 
         @media (max-width: 480px) {
             table {
-                font-size: 12px;
+            font-size: 12px;
             }
             .table-wrapper {
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                margin-bottom: 15px;
-              }
-            
-              /* Allow the table to be wider than the container */
-              .table-wrapper table {
-                min-width: 600px; /* Adjust this value as needed */
-                table-layout: auto; /* Let columns adjust based on content */
-                white-space: normal; /* Allow text to wrap */
-                font-size: 12px;
-              }
-              th,
-              td {
-                text-align: left;
-                padding: 10px;
-                border: none;
-                border-bottom: 1px solid var(--table-header);
-              }
-            
-              th {
-                background-color: transparent;
-                color: var(--text-color);
-                font-weight: bold;
-              }
-            
-              .container {
-                padding: 5px;
-              }
-            
-              .logo {
-                width: 60px;
-              }
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 15px;
+            }
+
+            /* Allow the table to be wider than the container */
+            .table-wrapper table {
+            min-width: 600px; /* Adjust this value as needed */
+            table-layout: auto; /* Let columns adjust based on content */
+            white-space: normal; /* Allow text to wrap */
+            font-size: 12px;
+            }
+            th,
+            td {
+            text-align: left;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid var(--table-header);
+            word-wrap: break-word; /* Allows breaking long words */
+            overflow-wrap: break-word; /* Ensures words wrap properly */
+            }
+
+            th {
+            background-color: transparent;
+            color: var(--text-color);
+            font-weight: bold;
+            }
+
+            .container {
+            padding: 5px;
+            }
+
+            .logo {
+            width: 60px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            table {
+            font-size: 10px;
+            }
+            .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 10px;
+            }
+
+            /* Allow the table to be wider than the container */
+            .table-wrapper table {
+            min-width: 500px; /* Adjust this value as needed */
+            table-layout: auto; /* Let columns adjust based on content */
+            white-space: normal; /* Allow text to wrap */
+            font-size: 10px;
+            }
+            th,
+            td {
+            text-align: left;
+            padding: 8px;
+            border: none;
+            border-bottom: 1px solid var(--table-header);
+            word-wrap: break-word; /* Allows breaking long words */
+            overflow-wrap: break-word; /* Ensures words wrap properly */
+            }
+
+            th {
+            background-color: transparent;
+            color: var(--text-color);
+            font-weight: bold;
+            }
+
+            .container {
+            padding: 3px;
+            }
+
+            .logo {
+            width: 50px;
+            }
         }
 
         /* Logo and back-button */
@@ -199,52 +247,52 @@
                 </tr>
                 <tr>
                     <td>12:00 PM</td>
-                    <td>UVic A / UW B</td>
-                    <td>UVic A / UW B</td>
-                    <td>UVic A / UW B</td>
-                    <td>UBC A / SFU A</td>
+                    <td>Men's UVic A / UW B</td>
+                    <td>Women's UVic A / UW B</td>
+                    <td>Mixed UVic A / UW B</td>
+                    <td>Men's UBC A / SFU A</td>
                 </tr>
                 <tr>
                     <td>1:00 PM</td>
-                    <td>UBC A / SFU A</td>
-                    <td>UBC A / SFU A</td>
-                    <td>UW A / UBC B</td>
-                    <td>UW A / UBC B</td>
+                    <td>Women's UBC A / SFU A</td>
+                    <td>Mixed UBC A / SFU A</td>
+                    <td>Men's UW A / UBC B</td>
+                    <td>Women's UW A / UBC B</td>
                 </tr>
                 <tr>
                     <td>2:00 PM</td>
-                    <td>UW A / UBC B</td>
-                    <td>SFU B / UVic B</td>
-                    <td>SFU B / UVic B</td>
-                    <td>SFU B / UVic B</td>
+                    <td>Mixed UW A / UBC B</td>
+                    <td>Men's SFU B / UVic B</td>
+                    <td>Women's SFU B / UVic B</td>
+                    <td>Mixed SFU B / UVic B</td>
                 </tr>
                 <tr>
                     <td>3:00 PM</td>
-                    <td>UVic A / UBC A</td>
-                    <td>UVic A / UBC A</td>
-                    <td>UVic A / UBC A</td>
-                    <td>SFU A / UW A</td>
+                    <td>Men's UVic A / UBC A</td>
+                    <td>Women's UVic A / UBC A</td>
+                    <td>Mixed UVic A / UBC A</td>
+                    <td>Men's SFU A / UW A</td>
                 </tr>
                 <tr>
                     <td>4:00 PM</td>
-                    <td>SFU A / UW A</td>
-                    <td>SFU A / UW A</td>
-                    <td>SFU B / UW B</td>
-                    <td>SFU B / UW B</td>
+                    <td>Women's SFU A / UW A</td>
+                    <td>Mixed SFU A / UW A</td>
+                    <td>Men's SFU B / UW B</td>
+                    <td>Women's SFU B / UW B</td>
                 </tr>
                 <tr>
                     <td>5:00 PM</td>
-                    <td>SFU B / UW B</td>
-                    <td>UVic B / UBC B</td>
-                    <td>UVic B / UBC B</td>
-                    <td>UVic B / UBC B</td>
+                    <td>Mixed SFU B / UW B</td>
+                    <td>Men's UVic B / UBC B</td>
+                    <td>Women's UVic B / UBC B</td>
+                    <td>Mixed UVic B / UBC B</td>
                 </tr>
                 <tr>
                     <td>6:00 PM</td>
-                    <td>UVic A / UW A</td>
-                    <td>UVic A / UW A</td>
-                    <td>SFU B / UBC A</td>
-                    <td>SFU B / UBC A</td>
+                    <td>Men's UVic A / UW A</td>
+                    <td>Women's UVic A / UW A</td>
+                    <td>Men's SFU B / UBC A</td>
+                    <td>Women's SFU B / UBC A</td>
                 </tr>
             </table>
         </div>
@@ -262,37 +310,37 @@
             </tr>
                 <tr>
                     <td>10:00 AM</td>
-                    <td>SFU A / UW B</td>
-                    <td>SFU A / UW B</td>
-                    <td>SFU A / UW B</td>
-                    <td>UBC B / UVic B</td>
+                    <td>Men's SFU A / UW B</td>
+                    <td>Women's SFU A / UW B</td>
+                    <td>Mixed SFU A / UW B</td>
+                    <td>Men's UBC B / UVic B</td>
                 </tr>
                 <tr>
                     <td>11:00 AM</td>
-                    <td>UBC B / UVic B</td>
-                    <td>UBC B / UVic B</td>
-                    <td>UVic A / SFU B</td>
-                    <td>UVic A / SFU B</td>
+                    <td>Women's UBC B / UVic B</td>
+                    <td>Mixed UBC B / UVic B</td>
+                    <td>Men's UVic A / SFU B</td>
+                    <td>Women's UVic A / SFU B</td>
                 </tr>
                 <tr>
                     <td>12:00 PM</td>
-                    <td>UVic A / SFU B</td>
-                    <td>UVic B / UW A</td>
-                    <td>UVic B / UW A</td>
-                    <td>UVic B / UW A</td>
+                    <td>Mixed UVic A / SFU B</td>
+                    <td>Men's UVic B / UW A</td>
+                    <td>Women's UVic B / UW A</td>
+                    <td>Mixed UVic B / UW A</td>
                 </tr>
                 <tr>
                     <td>1:00 PM</td>
-                    <td>UBC A / UW B</td>
-                    <td>UBC A / UW B</td>
-                    <td>UBC B / SFU A</td>
-                    <td>UBC B / SFU A</td>
+                    <td>Men's UBC A / UW B</td>
+                    <td>Women's UBC A / UW B</td>
+                    <td>Men's UBC B / SFU A</td>
+                    <td>Women's UBC B / SFU A</td>
                 </tr>
                 <tr>
                     <td>2:00 PM</td>
-                    <td>UBC A / UW B (if needed) </td>
+                    <td>Mixed UBC A / UW B (if needed) </td>
                     <td></td>
-                    <td>UBC B / SFU A (if needed) </td>
+                    <td>Mixed UBC B / SFU A (if needed) </td>
                     <td></td>
                 </tr>
                 <tr>
@@ -308,7 +356,7 @@
                 </tr>
                 <tr>
                     <td>5:00 PM</td>
-                    <td colspan="4">Trophy ceremony and closing speech</td>
+                    <td colspan="4">Trophy ceremony, group photos, and closing speech</td>
                 </tr>
             </table>
         </div>
