@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Volume Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { width: 100%; height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Load GeoJSON -->
+    <script>
+        var map = L.map('map').setView([48.42478, -123.36241], 14);
+
+        // Add OSM basemap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Load local GeoJSON
+        fetch('Traffic_Volume.geojson')
+            .then(response => response.json())
+            .then(data => {
+                L.geoJSON(data, {
+                    style: function (feature) {
+                        return { 
+                            color: '#ff0000', 
+                            weight: 4, 
+                            opacity: 0.8 
+                        };
+                    },
+                    onEachFeature: function (feature, layer) {
+                        if (feature.properties && feature.properties.Label) {
+                            layer.bindPopup(
+                                "<b>Label:</b> " + feature.properties.Label + 
+                                "<br><b>Year:</b> " + feature.properties.Year
+                            );
+                        }
+                    }
+                }).addTo(map);
+            })
+            .catch(err => console.error('GeoJSON load error:', err));
+    </script>
+</body>
+</html>
