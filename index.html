@@ -129,6 +129,20 @@
     .social-icons a:hover {
       color: #007bff;
     }
+    .responsive-iframe-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 ratio (9 / 16 = 0.5625) */
+      overflow: hidden;
+    }
+    .responsive-iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
   </style>
 </head>
 <body>
@@ -494,7 +508,7 @@
         <ul>
           <li>Developed/maintained statistical databases using SQL for accurate data management/reporting.</li>
           <li>Analyzed Household Income and Expenditure Survey data, applying statistical techniques to identify trends and insights.</li>
-          <li>Performed data querying, analysis, and visualization with tools like Python, R, and Tableau.</li>
+    
           <li>Assisted in census design and execution, including sampling, survey development, and data validation.</li>
         </ul>
       </div>
@@ -508,8 +522,9 @@
         feel free to reach out via the section below this one. I feel as though you have earned a fun minigame.
         Have a go at the first 'online' computer game I ever played.
       </p>
-    <center> <iframe src="https://files.crazygames.com/skifree/1/indexb.html" width="800" height="600" style="border:none;"></iframe></center>
-
+      <div class="responsive-iframe-container">
+        <iframe src="https://files.crazygames.com/skifree/1/indexb.html" frameborder="0" allowfullscreen></iframe>
+      </div>
     </section>
 
     <!-- Contact -->
