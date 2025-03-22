@@ -188,6 +188,11 @@
         opponentTeamDropdown.addEventListener("change", updateWinnerDropdown);
         document.getElementById("matchForm").addEventListener("submit", function(event) {
             event.preventDefault();
+            // Check if yourTeam and opponentTeam are the same
+            if (yourTeamDropdown.value === opponentTeamDropdown.value) {
+                document.getElementById("statusMessage").innerText = "❌ Your team and opponent team cannot be the same.";
+                return;
+            }
             // Disable the submit button immediately to prevent multiple clicks
             submitButton.disabled = true;
             var data = {
