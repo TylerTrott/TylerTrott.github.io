@@ -119,7 +119,7 @@
                 <option value="UW A">UW A</option>
                 <option value="UW B">UW B</option>
                 <option value="SFU A">SFU A</option>
-                <option value="SFU B">SFU B</option>
+                <option value="SFU B">Victoria</option>
             </select>
 
             <label for="opponentTeam">Opponent Team:</label>
@@ -132,7 +132,7 @@
                 <option value="UW A">UW A</option>
                 <option value="UW B">UW B</option>
                 <option value="SFU A">SFU A</option>
-                <option value="SFU B">SFU B</option>
+                <option value="SFU B">Victoria</option>
             </select>
 
             <label for="finalScore">Final Score:</label>
@@ -166,20 +166,17 @@
         const yourTeamDropdown = document.getElementById("yourTeam");
         const opponentTeamDropdown = document.getElementById("opponentTeam");
         const winnerDropdown = document.getElementById("winner");
-
+        const submitButton = document.querySelector("button[type='submit']");
         function updateWinnerDropdown() {
             winnerDropdown.innerHTML = '<option value="" disabled selected>Select Winning Team</option>';
-
             const yourTeam = yourTeamDropdown.value;
             const opponentTeam = opponentTeamDropdown.value;
-
             if (yourTeam) {
                 let option1 = document.createElement("option");
                 option1.value = yourTeam;
                 option1.textContent = yourTeam;
                 winnerDropdown.appendChild(option1);
             }
-
             if (opponentTeam) {
                 let option2 = document.createElement("option");
                 option2.value = opponentTeam;
@@ -187,13 +184,12 @@
                 winnerDropdown.appendChild(option2);
             }
         }
-
         yourTeamDropdown.addEventListener("change", updateWinnerDropdown);
         opponentTeamDropdown.addEventListener("change", updateWinnerDropdown);
-
         document.getElementById("matchForm").addEventListener("submit", function(event) {
             event.preventDefault();
-
+            // Disable the submit button immediately to prevent multiple clicks
+            submitButton.disabled = true;
             var data = {
                 matchType: document.getElementById("matchType").value,
                 yourTeam: yourTeamDropdown.value,
@@ -213,10 +209,14 @@
                 document.getElementById("statusMessage").innerText = "✅ Match submitted successfully!";
                 document.getElementById("matchForm").reset();
                 updateWinnerDropdown();
+                // Re-enable the submit button after successful submission
+                submitButton.disabled = false;
             })
             .catch((error) => {
                 console.error("Fetch error:", error);
                 document.getElementById("statusMessage").innerText = "❌ Error submitting match.";
+                // Re-enable the submit button in case of an error
+                submitButton.disabled = false;
             });
         });
     </script>
