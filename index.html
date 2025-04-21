@@ -145,7 +145,7 @@
     }
   </style>
 </head>
-<body>
+<body onload="window.scrollTo(0, 0)">
   <!-- Header Section -->
   <header>
     <img src="headshot.png" alt="Profile Image" />
@@ -508,7 +508,6 @@
         <ul>
           <li>Developed/maintained statistical databases using SQL for accurate data management/reporting.</li>
           <li>Analyzed Household Income and Expenditure Survey data, applying statistical techniques to identify trends and insights.</li>
-    
           <li>Assisted in census design and execution, including sampling, survey development, and data validation.</li>
         </ul>
       </div>
@@ -522,8 +521,17 @@
         feel free to reach out via the section below this one. I feel as though you have earned a fun minigame.
         Have a go at the first 'online' computer game I ever played.
       </p>
+      <script>
+        window.scrollTo(0, 0);
+        window.addEventListener('load', () => {
+        // wait a bit for iframe content to finish loading
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+        }, 200);
+      });
+      </script>
       <div class="responsive-iframe-container">
-        <iframe src="https://files.crazygames.com/skifree/1/indexb.html" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://files.crazygames.com/skifree/1/indexb.html" tabindex="-1" aria-hidden="true" loading="lazy"></iframe>
       </div>
     </section>
 
@@ -543,10 +551,5 @@
       </div>
     </section>
   </div>
-
-  <script>window.addEventListener('load', () => {
-    window.scrollTo(0, 0);
-  });
-  </script>
 </body>
 </html>
